@@ -12,8 +12,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="css/bootstrap.min.css">
+ 
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 		<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+
+
+    <!-- Bootstrap Form Helpers -->
+       <link href="css/bootstrap-form-helpers.min.css" rel="stylesheet" media="screen">
+
 		<!--[if lt IE 7]>
 		<link href="css/font-awesome-ie7.min.css" rel="stylesheet" media="screen">
 		<![endif]-->
@@ -50,8 +58,8 @@
 	 	<nav class="nav-map">
 			<ul class="nav nav-pills">
 				<li><a class="ascensorLink ascensorLink0 ascensorLinkActive" href="#"><i class="icon-user"></i><span ng-bind="nav.profile"></span></a></li>
-				<li><a class="ascensorLink ascensorLink1"><i class="icon-tasks"></i><span ng-bind="nav.skills"></span></a></li>
-				<li><a class="ascensorLink ascensorLink2"><i class="icon-briefcase"></i><span ng-bind="nav.career"></span></a></li>
+				<li><a class="ascensorLink ascensorLink1"><i class="icon-home"></i><span ng-bind="nav.skills"></span></a></li>
+				<li><a class="ascensorLink ascensorLink2"><i class="icon-list-alt"></i><span ng-bind="nav.career"></span></a></li>
 				<li><a class="ascensorLink ascensorLink3"><i class="icon-thumbs-up"></i><span ng-bind="nav.hobbies"></span></a></li>
 		 
 			</ul> 
@@ -125,11 +133,19 @@
 											</label>
 										  </div>
 								</div>
-							 
+				   				 <div class="control-group">
+				   				 	<div class="controls">
+				   				 		 
+
+
+				   				 	</div>
+								  	
+								</div>
+
 								<div class="control-group">
 								  <!-- Button -->
 								  <div class="controls">
-									<button   class="btn btn-success">Готово</button>
+									<button   class="btn btn-success">Дальше</button>
 								 
 								  </div>
 								</div>
@@ -140,7 +156,7 @@
 						<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
-								<span ng-repeat="tag in tagCloud" ng-class="tagClass($index, tag.level)" ng-bind="tag.label"></span>
+								<span ng-repeat="tag in tagCloud" ng-class="tagClass(0)" ng-bind="tag.label"></span>
 							</div>
 						</div>
 					</div>
@@ -155,70 +171,33 @@
 							<form class="form-horizontal" action="#/Skills"  >
 							  <fieldset>
 								<div id="legend">
-								  <legend class="">Основная информация </legend>
+								  <legend class="">Фитнес клуб</legend>
 								</div>
 								<div class="control-group">
 								  <!-- Username -->
-								  <label class="control-label"  for="username">Имя</label>
+								  <label class="control-label"  for="club">Название клуба</label>
 								  <div class="controls">
-									<input type="text" id="username" name="username" placeholder="введите свое настоящее имя" class="input-xlarge">
+									<input type="text" id="club" name="club" placeholder="введите название спорт-клуба" class="input-xlarge">
 								 
 								  </div>
 								</div>
 								<div class="control-group">
 								  <!-- Username -->
-								  <label class="control-label"  for="username">Фамилия</label>
+								  <label class="control-label"  for="clubadress">Адрес спортклуба</label>
 								  <div class="controls">
-									<input type="text" id="usersername" name="usersername" placeholder="введите свою настоящюю фамилию" class="input-xlarge">
+									<input type="text" id="clubadress" name="clubadress" placeholder="введите адрес клуба" class="input-xlarge">
 									 
 								  </div>
 								</div>
-							 
-								<div class="control-group">
-								  <!-- E-mail -->
-								  <label class="control-label" for="email">E-mail</label>
-								  <div class="controls">
-									<input type="text" id="email" name="email" placeholder="укажите email" class="input-xlarge">
+							  
+							  
+							  
 								 
-								  </div>
-								</div>
-							 
-								<div class="control-group">
-								  <!-- Password-->
-								  <label class="control-label" for="password">Пароль</label>
-								  <div class="controls">
-									<input type="password" id="password" name="password" placeholder="укажите пароль" class="input-xlarge">
-								 
-								  </div>
-								</div>
-							 
-								<div class="control-group">
-								  <!-- Password -->
-								  <label class="control-label"  for="password_confirm">Пароль (Повторите)</label>
-								  <div class="controls">
-									<input type="password" id="password_confirm" name="password_confirm" placeholder="повторите пароль" class="input-xlarge">
-									 
-								  </div>
-								</div>
-								
-								<div class="control-group">
-									 
-										  <div class="controls">
-											<label class="radio inline" for="radios-0">
-											  <input type="radio" name="radios" id="radios-0" value="Мужчина"  >
-											  Мужчина
-											</label>
-											<label class="radio inline" for="radios-1">
-											  <input type="radio" name="radios" id="radios-1" value="Женщина">
-											  Женщина
-											</label>
-										  </div>
-								</div>
 							 
 								<div class="control-group">
 								  <!-- Button -->
 								  <div class="controls">
-									<button   class="btn btn-success">Готово</button>
+									<button   class="btn btn-success">Дальше</button>
 								 
 								  </div>
 								</div>
@@ -263,7 +242,13 @@
         <script src="js/vendor/bootstrap.min.js"></script>
 		<script src="js/vendor/jquery.ascensor.min.js" type="text/javascript"></script>	
  
-		
+ 
+ 
+
+    <!-- Bootstrap Form Helpers -->
+        <script src="js/bootstrap-formhelpers.min.js"></script>
+         <script src="js/angular.country-select.js"></script>
+       		
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 		<script src="js/services.js"></script>

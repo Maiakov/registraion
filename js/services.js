@@ -104,10 +104,10 @@
 			},
 			getNavigation : function(){
 				var nav = {
-					profile : 'Profil',
-					skills  : 'Competences',
-					career  : 'Experience',
-					hobbies : 'Hobbies',
+					profile : 'Профиль',
+					skills  : 'Зал',
+					career  : 'Сила',
+					hobbies : 'Тело',
 					contact : 'Contact'
 				};
 				return nav;

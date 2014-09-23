@@ -31,35 +31,7 @@
 				];
 				return tagCloud;
 			},
-			getSkills : function() {
-				var skills = [
-					{
-					 title:'Web',
-					 specificSkills:['JAVA/J2EE (JSP, Spring, JSF)', 'REST', 'Javascript', 'JQuery', 'AJAX', 'JSON', 'HTML5', 'CSS3', 'AngularJS', 'Twitter Bootstrap', 'LESS', 'PHP', 'Velocity', 'Mustache', 'Extjs', 'Joomla', 'Webpshere Portal']
-					},
-					{
-					 title:'Langages et outils',
-					 specificSkills:['JAVA', 'Spring', 'Junit', 'Hibernate/JDBC', 'Maven', 'Eclipse', 'Jenkins', 'Sonar', 'Jira', 'Bazaar', 'CVS', 'SVN', 'Git', 'Jmeter', 'Selenium', 'Fitnesse', 'Quality Center', 'Clearcase', 'Clearquest', 'shell Unix']
-					},
-					{
-					 title:'Serveurs',
-					 specificSkills:['Apache', 'Tomcat', 'Jboss', 'NodeJS (lab)']
-					},
-					{
-					 title:'Base de donnees',
-					 specificSkills:['Oracle', 'MySql', 'SQL', 'PL/SQL', 'PL/SQL Developer']
-					},
-					{
-					 title:'Méthodologies ',
-					 specificSkills:['Agile Scrum', 'TDD', 'XP', 'Merise', 'UML']
-					},
-					{
-					 title:'Systèmes',
-					 specificSkills:['Windows', 'Linux Debian']
-					}
-				];
-				return skills;
-			},
+			 
 			getHobbies : function() {
 				var hobbies = {
 					hobby1 : {
@@ -112,13 +84,7 @@
 				};
 				return nav;
 			},
-			getTimeline : function(){
-				var timeline = {
-					lang    : 'fr',
-					content : 'https://docs.google.com/spreadsheet/pub?key=0Aj1DRa-P1mk8dExmZUxzY2VzbzFUWm1jMnZJS09oZ0E&output=html' 
-				}
-				return timeline;
-			},
+			 
 			getLinks : function(){
 				var links = {
 					 
@@ -128,72 +94,12 @@
 				}
 				return links;
 			},
-			getTechnos : function(){
-				var technos = {
-					img : [
-						{
-							src   : '/img/technos/angularjs.png',
-							title : 'AngularJS'
-						},
-						{
-							src   : '/img/technos/html5.png',
-							title : 'HTML5'
-						},
-						{
-							src   : '/img/technos/css3.png',
-							title : 'CSS3'
-						},
-						{
-							src   : '/img/technos/bootstrap.jpg',
-							title : 'Twitter Bootstrap'
-						},
-						{
-							src   : '/img/technos/ascensorjs.jpg',
-							title : 'AscensorJS'
-						}
-					],
-					source : {
-						text     : 'Sources du site sur ',
-						link     : 'https://github.com/Nicolest/myresume'
-					}				
-				}
-				return technos;
-			}
+			 
 		};
 	});
 	
-	/**************************************
-	* Mail service
-	***************************************/
-	
-	myResumeServices.factory('mailManager', function($http){
-		return {
-			getContactTemplates : function(){
-				return {contactForm:'views/contactForm.html', contactConfirm:'views/contactConfirmation.html'};
-			},
-			submitContactForm : function(data, callbackSuccess, callbackError){
-				$http.post('/application/email.php', {name:data.name, email:data.email, message:data.message})
-				.success(function(){
-					callbackSuccess();
-				})
-				.error(function(){
-					callbackError();
-				});
-			}
-		};
-	});
-	
-	/**************************************
-	* Timeline service
-	***************************************/
-	
-	myResumeServices.factory('timelineManager', function(){
-		return {
-			launchTimeline : function(dataUrl, lang){
-				MY_RESUME.launchTimeline(dataUrl, lang);
-			}
-		};
-	});
+	 
+	 
 	
 	/**************************************
 	* Utility service

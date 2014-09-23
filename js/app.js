@@ -1,29 +1,19 @@
 ﻿(function(){
 	var myResume = angular.module('myResume', ['myResumeServices']);
 		
-	myResume.filter('skillsFilter', function($filter, utility){
-		return function(skills, query, title){
-			var filteredSkills = $filter('filter')(skills, query);
-
-			// if the query corresponds to the title and the filtered skills are empty, we return all the skills
-			if(utility.contains(title, query) && filteredSkills.length == 0){
-				return skills;
-			}
-			return filteredSkills;
-		};
-	});
+	 
 	
-	myResume.controller('MyCtrl', function($scope, myResumeData, mailManager, timelineManager){
+	myResume.controller('MyCtrl', function($scope, myResumeData  ){
 		
 		// Data mangement
 		$scope.links = myResumeData.getLinks();
 		$scope.nav = myResumeData.getNavigation();
 		$scope.profile = myResumeData.getProfile();	
 		$scope.tagCloud = myResumeData.getTagCloud();
-		$scope.skills = myResumeData.getSkills();
+		 
 		$scope.hobbies = myResumeData.getHobbies();
 		$scope.contact = myResumeData.getContact();
-		$scope.technos = myResumeData.getTechnos();
+		 
 		
 		// Style management
 		var labelClassName = ['', 'label-success', 'label-warning', 'label-inverse', 'label-info', 'label-important'];
@@ -57,28 +47,7 @@
 		
  
 		
-		// mail management	
-		var contactTemplates = mailManager.getContactTemplates();
-		var mailSendingSuccess = function(){
-			$scope.emailSent = true;
-			$scope.contactTemplate = contactTemplates.contactConfirm;
-		}
-		var mailSendingError = function(){
-			$scope.emailSent = false;
-		}
-		
-		$scope.mail = {name:'', email:'', message:''};
-		$scope.contactTemplate = contactTemplates.contactForm;
-		$scope.emailSent = true;
-		$scope.submitContactForm = function(){
-			mailManager.submitContactForm($scope.mail, mailSendingSuccess, mailSendingError)
-		};
-		$scope.backToContactForm = function(){
-			for(key in $scope.mail){
-				$scope.mail[key] = '';
-			}
-			$scope.contactTemplate = contactTemplates.contactForm;
-		}
+		 
 	});
 	
 })();

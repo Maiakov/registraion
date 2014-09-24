@@ -9,10 +9,10 @@
 		$scope.links = myResumeData.getLinks();
 		$scope.nav = myResumeData.getNavigation();
 		$scope.profile = myResumeData.getProfile();	
-		$scope.tagCloud = myResumeData.getTagCloud();
+ 
 		 
-		$scope.hobbies = myResumeData.getHobbies();
-		$scope.contact = myResumeData.getContact();
+		$scope.stepDescription = myResumeData.getStepDescription();
+		 
 		 
 		
 		// Style management

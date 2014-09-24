@@ -15,65 +15,22 @@
 					startWorkingDate : '01/01/2009',
 					experience       : "$1 ans, $2 ans d'expérience"
 				};
-				var age = utility.getDurationInYears(false, profileData.birthDate);
-				var workExperience = utility.getDurationInYears(true, profileData.startWorkingDate);
-				var experience = utility.replaceParameters(profileData.experience, [age, workExperience]);
-				var profile = {
-					title      : profileData.title,
-					name  	   : profileData.name,
-					experience : experience
-				};
-				return profile;
+		 
+				return profileData;
 			},
-			getTagCloud : function() {
-				var tagCloud = [
-					{label:'Шаг 1 из 4', level:0} 
-				];
-				return tagCloud;
+		 
+			 
+			getStepDescription : function() {
+				var stepDescription = {
+					step1 : 'Ваше имя и фамилия будут отображаться в поиске',
+					step2 : 'Указов фитнес клуб, Вы сможете найти своих знакомых',
+					step3 : 'Указав данные по основным упражнениям, Вы сможете сравнить свою силу с силой других участников, а также узнать рейтинг силы',
+				    step4 : 'Потратив пару миниут на заполенение параметров тела, Вы сможете сравнить свое тело с другими участниками, а также узнать рейтинг тела!'
+
+				};
+				return stepDescription;
 			},
 			 
-			getHobbies : function() {
-				var hobbies = {
-					hobby1 : {
-						title : 'Sport',
-						desc1 : 'Adepte du sport et plus particulièrement du football, je pratique cette discipline en club depuis mon plus jeune âge.',
-						desc2 : 'J\'ai également entrainé une équipe de jeunes ainsi que l\'équipe de mon école Polytech\' qui a remporté cette année là le tournoi inter Polytech.'
-					},
-					hobby2 : {
-						title : 'Voyage',
-						desc1 : 'De nature curieux, je voyage régulièrement dans le but de découvrir de nouvelles cultures.',
-						desc2 : 'J\'ai notamment été fasciné par mes séjours en Asie du Sud (Hong-Kong, Malaisie, Singapour, Thailande, Sri-Lanka).'
-					},
-					hobby3 : {
-						title : 'Art',
-						desc1 : 'Je me passionne pour les arts modernes et les arts urbains. Je vais régulièrement voir des expositions (Warhol, Dali, Keith Haring, Banksy ...).',
-						desc2 : 'De plus j\'assiste à des représentations théâtrales, les comédies de boulevard me plaisent particulièrement.'
-					}
-				};
-				return hobbies;
-			},
-			getContact : function() {
-				var contact = {
-					form : {
-						error   : 'Erreur lors de l\'envoi de l\'email. Veuillez réessayer.',
-						name    : 'Nom',
-						email   : 'Email',
-						message : 'Message',
-						send    : 'Envoyer',
-						confirm : {
-							part1 : 'Merci pour votre message !',
-							part2 : 'A bientôt',
-							back  : 'Retour au formulaire »'
-						}
-					},
-					address : {
-						city    : 'Paris',
-						zipCode : '75005',
-						email   : 'nicolas.huguet34[@]gmail.com'
-					}
-				};
-				return contact;
-			},
 			getNavigation : function(){
 				var nav = {
 					profile : 'Профиль',
@@ -110,9 +67,7 @@
 			contains : function(value1, value2){
 				return MY_RESUME.contains(value1, value2);
 			},
-			getDurationInYears : function(greater, startDate, endDate){
-				return MY_RESUME.getDurationInYears(greater, startDate, endDate);
-			},
+		 
 			replaceParameters : function(string, values){
 				return MY_RESUME.replaceParameters(string, values);
 			}

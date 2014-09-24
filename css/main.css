@@ -211,6 +211,15 @@
 	}
 }
 
+.body    {
+ 
+       position: absolute;
+	   width:320px;
+	   left:15%;   
+	   top: 28%;
+	   z-index:0;
+	   
+}
 
 .skills-cloud {
 	line-height:2em;

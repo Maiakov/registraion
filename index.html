@@ -86,7 +86,7 @@
 								</div>
 								<div class="control-group">
 								  <!-- Username -->
-								  <label class="control-label"  for="username">Фамилия</label>
+								  <label class="control-label"  for="usersername">Фамилия</label>
 								  <div class="controls">
 									<input type="text" id="usersername" name="usersername" placeholder="введите свою настоящюю фамилию" class="input-xlarge">
 									 
@@ -156,7 +156,7 @@
 						<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
-								<span ng-repeat="tag in tagCloud" ng-class="tagClass(0)" ng-bind="tag.label"></span>
+								<span  ng-class="tagClass(0)" ng-bind="stepDescription.step1"></span>
 							</div>
 						</div>
 					</div>
@@ -208,7 +208,7 @@
 						<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
-								<span ng-repeat="tag in tagCloud" ng-class="tagClass($index, tag.level)" ng-bind="tag.label"></span>
+									<span  ng-class="tagClass(0)" ng-bind="stepDescription.step2"></span>
 							</div>
 						</div>
 						</div>	
@@ -217,81 +217,284 @@
 			</section>
 			
 			<!-- Career -->
-		 
-
-			<!-- Hobbies -->
-			<section>
+		 	<section>
 				<div class="content">
 					<div class="container-fluid">
 					  <form class="form-horizontal" action="#/Skills"  >
 							  <fieldset>
 								<div id="legend">
-								  <legend class="">Показатели </legend>
+								  <legend class="">Показатели тела</legend>
 								</div>
 								<div class="control-group">
-								  <!-- Username -->
-								  <label class="control-label"  for="username">Имя</label>
+							 
+								  <label class="control-label"  for="height">Рост</label>
 								  <div class="controls">
-									<input type="text" id="username" name="username" placeholder="введите свое настоящее имя" class="input-xlarge">
+									<input type="number" step="any" id="height" name="height" placeholder="Рост, см" class="input-large">
 								 
 								  </div>
 								</div>
+								<div id="legend">
+								  <legend class="">Масса</legend>
+								</div>
 								<div class="control-group">
-								  <!-- Username -->
-								  <label class="control-label"  for="username">Фамилия</label>
+								  <!-- Масса -->
+								  <label class="control-label"  for="weight">Вес</label>
 								  <div class="controls">
-									<input type="text" id="usersername" name="usersername" placeholder="введите свою настоящюю фамилию" class="input-xlarge">
+									<input type="number" step="any" id="weight" name="weight" placeholder="Вес, кг" class="input-large">
 									 
 								  </div>
+								  
 								</div>
 							 
 								<div class="control-group">
-								  <!-- E-mail -->
-								  <label class="control-label" for="email">E-mail</label>
+								  <!-- жир -->
+								  <label class="control-label" for="fat">Процент жира</label>
 								  <div class="controls">
-									<input type="text" id="email" name="email" placeholder="укажите email" class="input-xlarge">
+									<input type="number" step="any" id="fat" name="fat" placeholder="Процент жира, %" class="input-large">
+								 
+								  </div>
+								</div>
+							 
+							 	<div id="legend">
+								  <legend class="">Туловище</legend>
+								</div>
+								
+								
+								
+								<div class="control-group">
+							 
+								  <label class="control-label" for="neck">Шея</label>
+								  <div class="controls">
+									<input type="number" step="any" id="neck" name="neck" placeholder="укажите пароль" class="input-large">
 								 
 								  </div>
 								</div>
 							 
 								<div class="control-group">
-								  <!-- Password-->
-								  <label class="control-label" for="password">Пароль</label>
+							 
+								  <label class="control-label" for="chest">Грудь</label>
 								  <div class="controls">
-									<input type="password" id="password" name="password" placeholder="укажите пароль" class="input-xlarge">
+									<input type="number" step="any" id="chest" name="chest" placeholder="Грудь, см" class="input-large">
+								 
+								  </div>
+								</div>
+							 	<div class="control-group">
+							 
+								  <label class="control-label" for="waist">Талия</label>
+								  <div class="controls">
+									<input type="number" step="any" id="waist" name="waist" placeholder="Талия, см" class="input-large">
+								 
+								  </div>
+								</div>
+							 	<div class="control-group">
+							 
+								  <label class="control-label" for="hip">Бедра</label>
+								  <div class="controls">
+									<input type="number" step="any" id="hip" name="hip" placeholder="Бедра, см" class="input-large">
 								 
 								  </div>
 								</div>
 							 
+								 
+								 
+								<div id="legend">
+								  <legend class="">Руки</legend>
+								</div>
+								
+								
+								
 								<div class="control-group">
-								  <!-- Password -->
-								  <label class="control-label"  for="password_confirm">Пароль (Повторите)</label>
+							 
+								  <label class="control-label" for="biceps">Бицепс</label>
 								  <div class="controls">
-									<input type="password" id="password_confirm" name="password_confirm" placeholder="повторите пароль" class="input-xlarge">
-									 
+									<input type="number" step="any" id="biceps" name="biceps" placeholder="Бицепс, см" class="input-large">
+								 
+								  </div>
+								</div>
+								<div class="control-group">
+							 
+								  <label class="control-label" for="forearm">Предплечье</label>
+								  <div class="controls">
+									<input type="number" step="any" id="forearm" name="forearm" placeholder="Предплечье, см" class="input-large">
+								 
+								  </div>
+								</div>
+								<div class="control-group">
+							 
+								  <label class="control-label" for="wrist">Запястье</label>
+								  <div class="controls">
+									<input type="number" step="any" id="wrist" name="wrist" placeholder="Запястье, см" class="input-large">
+								 
+								  </div>
+								</div>
+				   				 
+
+								<div class="control-group">
+								  <!-- Button -->
+								  <div class="controls">
+									<button   class="btn btn-success">Дальше</button>
+								 
 								  </div>
 								</div>
 								
+								 
+							  </fieldset>
+						</form>
+						<hr>				
+						<div class="row-fluid">
+							<div class="span6 offset1 skills-cloud">
+								<span  ng-class="tagClass(0)" ng-bind="stepDescription.step3"></span>
+							</div>
+						</div>
+					</div>
+				</div>				
+			</section>
+	
+
+			<!-- Hobbies -->
+			<section>
+				<div class="content">
+					<div class="container-fluid">
+					<div class="body"> 
+						<img src="img/body.png"  class="img-rounded"> 
+					</div>
+
+					  <form class="form-horizontal" action="#/Skills"  >
+							  <fieldset>
+								<div id="legend">
+								  <legend class="">Показатели тела</legend>
+								</div>
 								<div class="control-group">
+							 
+								  <label class="control-label"  for="height">Рост</label>
+								  <div class="controls">
+									<input type="number" step="any" id="height" name="height" placeholder="Рост, см" class="input-large">
+								 
+								  </div>
+								</div>
+							 
+								<div class="control-group">
+								  <!-- Масса -->
+								  <label class="control-label"  for="weight">Вес</label>
+								  <div class="controls">
+									<input type="number" step="any" id="weight" name="weight" placeholder="Вес, кг" class="input-large">
 									 
-										  <div class="controls">
-											<label class="radio inline" for="radios-0">
-											  <input type="radio" name="radios" id="radios-0" value="Мужчина"  >
-											  Мужчина
-											</label>
-											<label class="radio inline" for="radios-1">
-											  <input type="radio" name="radios" id="radios-1" value="Женщина">
-											  Женщина
-											</label>
-										  </div>
+								  </div>
+								  
+								</div>
+							 
+								<div class="control-group">
+								  <!-- жир -->
+								  <label class="control-label" for="fat">Процент жира</label>
+								  <div class="controls">
+									<input type="number" step="any" id="fat" name="fat" placeholder="Процент жира, %" class="input-large">
+								 
+								  </div>
+								</div>
+							 
+							 	<div id="legend">
+								  <legend class="">Туловище</legend>
+								</div>
+								
+								
+								
+								<div class="control-group">
+							 
+								  <label class="control-label" for="neck">Шея</label>
+								  <div class="controls">
+									<input type="number" step="any" id="neck" name="neck" placeholder="Шея, см" class="input-large">
+								 
+								  </div>
+								</div>
+							 
+								<div class="control-group">
+							 
+								  <label class="control-label" for="chest">Грудь</label>
+								  <div class="controls">
+									<input type="number" step="any" id="chest" name="chest" placeholder="Грудь, см" class="input-large">
+								 
+								  </div>
+								</div>
+							 	<div class="control-group">
+							 
+								  <label class="control-label" for="waist">Талия</label>
+								  <div class="controls">
+									<input type="number" step="any" id="waist" name="waist" placeholder="Талия, см" class="input-large">
+								 
+								  </div>
+								</div>
+							 	<div class="control-group">
+							 
+								  <label class="control-label" for="hip">Бедра</label>
+								  <div class="controls">
+									<input type="number" step="any" id="hip" name="hip" placeholder="Бедра, см" class="input-large">
+								 
+								  </div>
+								</div>
+							 
+								 
+								 
+								<div id="legend">
+								  <legend class="">Руки</legend>
+								</div>
+								
+								
+								
+								<div class="control-group">
+							 
+								  <label class="control-label" for="biceps">Бицепс</label>
+								  <div class="controls">
+									<input type="number" step="any" id="biceps" name="biceps" placeholder="Бицепс, см" class="input-large">
+								 
+								  </div>
+								</div>
+								<div class="control-group">
+							 
+								  <label class="control-label" for="forearm">Предплечье</label>
+								  <div class="controls">
+									<input type="number" step="any" id="forearm" name="forearm" placeholder="Предплечье, см" class="input-large">
+								 
+								  </div>
+								</div>
+								<div class="control-group">
+							 
+								  <label class="control-label" for="wrist">Запястье</label>
+								  <div class="controls">
+									<input type="number" step="any" id="wrist" name="wrist" placeholder="Запястье, см" class="input-large">
+								 
+								  </div>
+								</div>
+								
+								
+								<div id="legend">
+								  <legend class="">Ноги</legend>
+								</div>
+								
+								
+								
+								<div class="control-group">
+							 
+								  <label class="control-label" for="thigh">Бедро</label>
+								  <div class="controls">
+									<input type="number" step="any" id="thigh" name="thigh" placeholder="Бедро, см" class="input-large">
+								 
+								  </div>
 								</div>
 				   				 <div class="control-group">
-				   				 	<div class="controls">
-				   				 		 
-
-
-				   				 	</div>
-								  	
+							 
+								  <label class="control-label" for="ikra">Икра</label>
+								  <div class="controls">
+									<input type="number" step="any" id="ikra" name="ikra" placeholder="Икра, см" class="input-large">
+								 
+								  </div>
+								</div>
+								<div class="control-group">
+							 
+								  <label class="control-label" for="ankle">Лодыжка</label>
+								  <div class="controls">
+									<input type="number" step="any" id="ankle" name="ankle" placeholder="Лодыжка, см" class="input-large">
+								 
+								  </div>
 								</div>
 
 								<div class="control-group">
@@ -308,16 +511,19 @@
 						<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
-								<span ng-repeat="tag in tagCloud" ng-class="tagClass(0)" ng-bind="tag.label"></span>
+								<span  ng-class="tagClass(0)" ng-bind="stepDescription.step4"></span>
 							</div>
 						</div>
 					</div>
-				</div>				
+				</div>		
+ 
+				
 			</section>
 	
 				
         </div>
-
+		
+		 
 		<div id="loader" loader>
 			<i class="icon-spinner icon-spin ajax-loader"></i>
 		</div>

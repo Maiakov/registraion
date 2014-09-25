@@ -35,7 +35,7 @@ var MY_RESUME = {};
 			windowsOn: 0,
 			direction: "chocolate",
 			directionOnSize: {type:'width', size:minWidth, direction:"x"},
-			ascensorMap: [[0,0],[0,1],[1,0],[1,1] ],
+			ascensorMap: [[0,0],[0,1],[0,2],[0,3] ],
 			easing: 'easeInOutQuad',
 			keyNavigation: false,
 			queued: false,

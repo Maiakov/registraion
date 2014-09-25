@@ -30,6 +30,7 @@ var MY_RESUME = {};
 		$('#ascensorBuilding').ascensor({
 			ascensorName: 'ascensor',
 			childType: 'section',
+	 
 			ascensorFloorName: ['Profile', 'Skills', 'Career', 'Hobies' ],
 			time: 1000,
 			windowsOn: 0,

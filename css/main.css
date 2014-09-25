@@ -216,11 +216,12 @@
        position: absolute;
 	   
 	  left: 5%;
-	   top: 28%;
+	  top: 28%;
 	   z-index:0;
 	   
 }
-
+ 
+ 
 .skills-cloud {
 	line-height:2em;
 	text-align:center;

@@ -71,7 +71,7 @@
 			<section>	
 				<div class="content">
 					<div class="container-fluid" >
-					 <form class="form-horizontal" action="#/Skills"  >
+					 <form class="form-horizontal" action=""  >
 							  <fieldset>
 								<div id="legend">
 								  <legend class="">Основная информация </legend>
@@ -80,7 +80,7 @@
 								  <!-- Username -->
 								  <label class="control-label"  for="username">Имя</label>
 								  <div class="controls">
-									<input type="text" id="username" name="username" placeholder="введите свое настоящее имя" class="input-xlarge">
+									<input type="text" id="username" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="username" placeholder="введите свое настоящее имя" class="input-xlarge">
 								 
 								  </div>
 								</div>
@@ -88,7 +88,7 @@
 								  <!-- Username -->
 								  <label class="control-label"  for="usersername">Фамилия</label>
 								  <div class="controls">
-									<input type="text" id="usersername" name="usersername" placeholder="введите свою настоящюю фамилию" class="input-xlarge">
+									<input type="text" id="usersername" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="usersername" placeholder="введите свою настоящюю фамилию" class="input-xlarge">
 									 
 								  </div>
 								</div>
@@ -97,7 +97,7 @@
 								  <!-- E-mail -->
 								  <label class="control-label" for="email">E-mail</label>
 								  <div class="controls">
-									<input type="text" id="email" name="email" placeholder="укажите email" class="input-xlarge">
+									<input type="email" id="email" name="email" placeholder="укажите email" class="input-xlarge">
 								 
 								  </div>
 								</div>
@@ -106,7 +106,7 @@
 								  <!-- Password-->
 								  <label class="control-label" for="password">Пароль</label>
 								  <div class="controls">
-									<input type="password" id="password" name="password" placeholder="укажите пароль" class="input-xlarge">
+									<input type="password" id="password" maxlength="20" name="password" placeholder="укажите пароль" class="input-xlarge">
 								 
 								  </div>
 								</div>
@@ -115,7 +115,7 @@
 								  <!-- Password -->
 								  <label class="control-label"  for="password_confirm">Пароль (Повторите)</label>
 								  <div class="controls">
-									<input type="password" id="password_confirm" name="password_confirm" placeholder="повторите пароль" class="input-xlarge">
+									<input type="password" id="password_confirm" maxlength="20" name="password_confirm" placeholder="повторите пароль" class="input-xlarge">
 									 
 								  </div>
 								</div>
@@ -142,17 +142,15 @@
 								  	
 								</div>
 
-								<div class="control-group">
-								  <!-- Button -->
-								  <div class="controls">
-									<button   class="btn btn-success">Дальше</button>
-								 
-								  </div>
-								</div>
 								
+							 
 								 
 							  </fieldset>
 						</form>
+						<div class="offset2">
+								 
+								<button   class="btn btn-info ascensorLinkNext">Дальше</button>
+						</div>
 						<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
@@ -168,7 +166,7 @@
 				<div class="content">
 					<div class="container-fluid">
 						<div class="row-fluid">
-							<form class="form-horizontal" action="#/Skills"  >
+							<form class="form-horizontal" action=""  >
 							  <fieldset>
 								<div id="legend">
 								  <legend class="">Фитнес клуб</legend>
@@ -177,7 +175,7 @@
 								  <!-- Username -->
 								  <label class="control-label"  for="club">Название клуба</label>
 								  <div class="controls">
-									<input type="text" id="club" name="club" placeholder="введите название спорт-клуба" class="input-xlarge">
+									<input type="text" id="club" maxlength="25" name="club" placeholder="введите название спорт-клуба" class="input-xlarge">
 								 
 								  </div>
 								</div>
@@ -192,19 +190,16 @@
 							  
 							  
 							  
-								 
 							 
-								<div class="control-group">
-								  <!-- Button -->
-								  <div class="controls">
-									<button   class="btn btn-success">Дальше</button>
-								 
-								  </div>
-								</div>
 								
 								 
 							  </fieldset>
 						</form>
+						<div class="offset2">
+								<button   class="btn btn-default ascensorLinkPrev">Назад</button>
+								 
+								<button   class="btn btn-info ascensorLinkNext">Дальше</button>
+						</div>
 						<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
@@ -220,7 +215,7 @@
 		 	<section>
 				<div class="content">
 					<div class="container-fluid">
-					  <form class="form-horizontal" action="#/Skills"  >
+					  <form class="form-horizontal" action=""  >
 							  <fieldset>
 								<div id="legend">
 								  <legend class="">Жим штанги лежа</legend>
@@ -229,7 +224,7 @@
 							 
 								  <label class="control-label"  for="benchpress">1 повторение</label>
 								  <div class="controls">
-									<input type="number" step="any" id="benchpress" name="benchpress" placeholder="Максимальный вес, кг" class="input-large">
+									<input type="number" step="2.5" min="0" max="488" id="benchpress" name="benchpress" placeholder="Максимальный вес, кг" class="input-large">
 								 
 								  </div>
 								</div>
@@ -240,7 +235,7 @@
 								  <!-- Масса -->
 								  <label class="control-label"  for="pressstanding">1 повторение</label>
 								  <div class="controls">
-									<input type="number" step="any" id="pressstanding" name="pressstanding" placeholder="Максимальный вес, кг" class="input-large">
+									<input type="number" step="2.5" min="0" max="200"id="pressstanding" name="pressstanding" placeholder="Максимальный вес, кг" class="input-large">
 									 
 								  </div>
 								  
@@ -255,7 +250,7 @@
 							 
 								  <label class="control-label" for="deadlift">1 повторение</label>
 								  <div class="controls">
-									<input type="number" step="any" id="deadlift" name="deadlift" placeholder="Максимальный вес, кг" class="input-large">
+									<input type="number" step="2.5" min="0" max="500" id="deadlift" name="deadlift" placeholder="Максимальный вес, кг" class="input-large">
 								 
 								  </div>
 								</div>
@@ -272,7 +267,7 @@
 							 
 								  <label class="control-label" for="squat">1 повторение</label>
 								  <div class="controls">
-									<input type="number" step="any" id="squat" name="squat" placeholder="Максимальный вес, кг" class="input-large">
+									<input type="number" step="2.5" min="0" max="600" id="squat" name="squat" placeholder="Максимальный вес, кг" class="input-large">
 								 
 								  </div>
 								</div>
@@ -284,26 +279,24 @@
 
 								<div class="control-group">
 							 
-								  <label class="control-label" for="tightening">1 повторение</label>
+								  <label class="control-label" for="tightening">Макс. повторений</label>
 								  <div class="controls">
-									<input type="number" step="any" id="tightening" name="tightening" placeholder="Максимальный вес, кг" class="input-large">
+									<input type="number" step="1" min="0" max="200" id="tightening" name="tightening" placeholder="Количество повторений" class="input-large">
 								 
 								  </div>
 								</div>
 							 
 				   				 
 
-								<div class="control-group">
-								  <!-- Button -->
-								  <div class="controls">
-									<button   class="btn btn-success">Дальше</button>
-								 
-								  </div>
-								</div>
-								
+							 
 								 
 							  </fieldset>
 						</form>
+						<div class="offset1">
+								<button   class="btn btn-default ascensorLinkPrev">Назад</button>
+								 
+								<button   class="btn btn-info ascensorLinkNext">Дальше</button>
+						</div>
 						<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
@@ -323,7 +316,7 @@
 						<img src="img/body.png"  class="img-rounded"> 
 					</div>
 
-					  <form class="form-horizontal" action="#/Skills"  >
+					  <form class="form-horizontal" action=""  >
 							  <fieldset>
 								<div id="legend">
 								  <legend class="">Показатели тела</legend>
@@ -332,7 +325,7 @@
 							 
 								  <label class="control-label"  for="height">Рост</label>
 								  <div class="controls">
-									<input type="number" step="any" id="height" name="height" placeholder="Рост, см" class="input-large">
+									<input type="number" step="0.2" min="120" max="230" id="height" name="height" placeholder="Рост, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -341,7 +334,7 @@
 								  <!-- Масса -->
 								  <label class="control-label"  for="weight">Вес</label>
 								  <div class="controls">
-									<input type="number" step="any" id="weight" name="weight" placeholder="Вес, кг" class="input-large">
+									<input type="number" step="0.2" min="30" max="300" id="weight" name="weight" placeholder="Вес, кг" class="input-large">
 									 
 								  </div>
 								  
@@ -351,7 +344,7 @@
 								  <!-- жир -->
 								  <label class="control-label" for="fat">Процент жира</label>
 								  <div class="controls">
-									<input type="number" step="any" id="fat" name="fat" placeholder="Процент жира, %" class="input-large">
+									<input type="number" step="0.2" min="0" max="50" id="fat" name="fat" placeholder="Процент жира, %" class="input-large">
 								 
 								  </div>
 								</div>
@@ -366,7 +359,7 @@
 							 
 								  <label class="control-label" for="neck">Шея</label>
 								  <div class="controls">
-									<input type="number" step="any" id="neck" name="neck" placeholder="Шея, см" class="input-large">
+									<input type="number" step="0.2" min="10" max="50" id="neck" name="neck" placeholder="Шея, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -375,7 +368,7 @@
 							 
 								  <label class="control-label" for="chest">Грудь</label>
 								  <div class="controls">
-									<input type="number" step="any" id="chest" name="chest" placeholder="Грудь, см" class="input-large">
+									<input type="number" step="0.2" min="40" max="200" id="chest" name="chest" placeholder="Грудь, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -383,7 +376,7 @@
 							 
 								  <label class="control-label" for="waist">Талия</label>
 								  <div class="controls">
-									<input type="number" step="any" id="waist" name="waist" placeholder="Талия, см" class="input-large">
+									<input type="number" step="0.2" min="30" max="200" id="waist" name="waist" placeholder="Талия, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -391,7 +384,7 @@
 							 
 								  <label class="control-label" for="hip">Бедра</label>
 								  <div class="controls">
-									<input type="number" step="any" id="hip" name="hip" placeholder="Бедра, см" class="input-large">
+									<input type="number" step="0.2" min="20" max="200" id="hip" name="hip" placeholder="Бедра, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -408,7 +401,7 @@
 							 
 								  <label class="control-label" for="biceps">Бицепс</label>
 								  <div class="controls">
-									<input type="number" step="any" id="biceps" name="biceps" placeholder="Бицепс, см" class="input-large">
+									<input type="number" step="0.2" min="10" max="60" id="biceps" name="biceps" placeholder="Бицепс, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -416,7 +409,7 @@
 							 
 								  <label class="control-label" for="forearm">Предплечье</label>
 								  <div class="controls">
-									<input type="number" step="any" id="forearm" name="forearm" placeholder="Предплечье, см" class="input-large">
+									<input type="number" step="0.2" min="10" max="50" id="forearm" name="forearm" placeholder="Предплечье, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -424,7 +417,7 @@
 							 
 								  <label class="control-label" for="wrist">Запястье</label>
 								  <div class="controls">
-									<input type="number" step="any" id="wrist" name="wrist" placeholder="Запястье, см" class="input-large">
+									<input type="number" step="0.2" min="6" max="50" id="wrist" name="wrist" placeholder="Запястье, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -440,7 +433,7 @@
 							 
 								  <label class="control-label" for="thigh">Бедро</label>
 								  <div class="controls">
-									<input type="number" step="any" id="thigh" name="thigh" placeholder="Бедро, см" class="input-large">
+									<input type="number" step="0.2" min="20" max="150" id="thigh" name="thigh" placeholder="Бедро, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -448,7 +441,7 @@
 							 
 								  <label class="control-label" for="ikra">Икра</label>
 								  <div class="controls">
-									<input type="number" step="any" id="ikra" name="ikra" placeholder="Икра, см" class="input-large">
+									<input type="number" step="0.2" min="10" max="100" id="ikra" name="ikra" placeholder="Икра, см" class="input-large">
 								 
 								  </div>
 								</div>
@@ -456,23 +449,20 @@
 							 
 								  <label class="control-label" for="ankle">Лодыжка</label>
 								  <div class="controls">
-									<input type="number" step="any" id="ankle" name="ankle" placeholder="Лодыжка, см" class="input-large">
+									<input type="number" step="0.2" min="5" max="50" id="ankle" name="ankle" placeholder="Лодыжка, см" class="input-large">
 								 
 								  </div>
 								</div>
 
-								<div class="control-group">
-								  <!-- Button -->
-								  <div class="controls">
-									<button   class="btn btn-success">Дальше</button>
-								 
-								  </div>
-								</div>
-								
 								 
 							  </fieldset>
 						</form>
-						<hr>				
+						<div class="offset1">
+								<button   class="btn btn-default ascensorLinkPrev">Назад</button>
+								 
+								<button   class="btn btn-info">Готово</button>
+						</div>
+				<hr>				
 						<div class="row-fluid">
 							<div class="span6 offset1 skills-cloud">
 								<span  ng-class="tagClass(0)" ng-bind="stepDescription.step4"></span>

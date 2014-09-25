@@ -37,7 +37,7 @@
 					skills  : 'Зал',
 					career  : 'Сила',
 					hobbies : 'Тело',
-					contact : 'Contact'
+					
 				};
 				return nav;
 			},

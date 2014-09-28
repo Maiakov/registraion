@@ -1,5 +1,5 @@
 ﻿(function(){
-	var myResume = angular.module('myResume', ['myResumeServices']);
+	var myResume = angular.module('myResume', ['myResumeServices','ngRoute','ngResource']);
 		
 	 
 	

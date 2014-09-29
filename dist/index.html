@@ -22,10 +22,11 @@
     <body ng-app="myResume" ng-controller="MyCtrl">
 	
 	    <header>
-			<nav class="nav navbar-inverse navbar-fixed-top">
+			<nav class="nav navbar-inverse navbar-fixed-top" style="" role="navigation">
 				<div class="navbar-inner">
-					<div class="container-fluid">
-						<span class="resume-title" ng-bind="profile.name"></span>				 
+					<div class="container">
+					    <span class="resume-title visible-xs-block">Vital Sport</span>
+						<span class="resume-title visible-sm-block visible-md-block visible-lg-block" ng-bind="profile.name"></span>				 
 						<div >
 							<span class="pull-right nav-icon">
 								<a ng-href="{{links.twitter}}" target="_blank"><i class="text-info icon-twitter"></i></a>
@@ -34,13 +35,13 @@
 						</div>
 					</div>
 				</div>	
-			</nav>	
+			</nav>
 		</header>
 		
 		<div id="ascensorBuilding" class="ascensor-container">
 		    <!-- Main info -->
 		    <section name="mainInfo">
-		        <div class="container">
+		        <div class="container" style="min-width:430px;">
      	            <!--HEADER-->
      	        	
      	        	<!--REG STAGES-->
@@ -52,14 +53,14 @@
 					
                     <!--REG TITLE-->			
 					<div class="row">
-                	    <div class="col-sm-offset-2 col-sm-8">
+                	    <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                 	        <h3 class="text-center" style="padding-bottom:.2em; border-bottom:1px solid #eee;">Основная информация</h3>
                 	    </div>
                 	</div>
 
                 	<!--REG NOTE-->
                 	<div class="row">
-                	    <div class="col-sm-offset-3 col-sm-6">
+                	    <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
                 	        <p class="text-center" style="color:#999;"><em>Ваше имя и фамилия будут отображаться в поиске</em></p>
                 	    </div>
                 	</div>
@@ -69,43 +70,43 @@
                     <form class="form-horizontal" action="">
                     	<fieldset>
 						    <!--login-->
-						    <div class="form-group form-group-sm">
-                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="email">Логин</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+						    <div class="form-group">
+                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="email">Логин</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="email" id="email" name="email" placeholder="введите email" class="form-control">
                     			</div>
                     		</div>
 							<!--password-->
-		        			<div class="form-group form-group-sm">
-                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="password">Пароль</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+		        			<div class="form-group">
+                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="password">Пароль</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="password" id="password" maxlength="20" name="password" placeholder="введите пароль" class="form-control">
                     			</div>
                     		</div>
 							<!--password confirm-->
-							<div class="form-group form-group-sm">
-                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;" for="password_confirm">Повторить пароль</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+							<div class="form-group">
+                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;" for="password_confirm">Повторить пароль</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="password" id="password_confirm" maxlength="20" name="password_confirm" placeholder="повторите пароль" class="form-control">
                     			</div>
                     		</div>
 							<!--username-->
-                    		<div class="form-group form-group-sm">
-                                <label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;" for="username">Имя</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+                    		<div class="form-group">
+                                <label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;" for="username">Имя</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                     				<input type="text" id="username" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="username" placeholder="введите имя" class="form-control">									
                     			</div>
                     		</div>
                             <!--user surname-->							
-                    		<div class="form-group form-group-sm">
-                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="usersername">Фамилия</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+                    		<div class="form-group">
+                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="usersername">Фамилия</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="text" id="usersername" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="usersername" placeholder="введите фамилию" class="form-control">
                     			</div>
                     		</div>
                             <!--sex-->
                             <div class="form-group">
-                                <label class="radio-inline col-xs-offset-2 col-sm-offset-4" style="padding-left:3em;">
+                                <label class="radio-inline col-xs-offset-2 col-sm-offset-3 col-md-offset-4" style="padding-left:3em;">
                                     <input type="radio" name="inlineRadioOptions" id="male" value="male"> мужчина
                                 </label>
                                 <label class="radio-inline">
@@ -116,8 +117,7 @@
                     </form>
                     <br>
 					<div>
-						<button class="visible-xs-block btn btn-info btn-sm ascensorLinkNext center-block">Дальше</button>
-						<button class="visible-sm-block visible-md-block visible-lg-block btn btn-info btn-sm ascensorLinkNext center-block">Сохранить и перейти дальше</button>
+						<button class="btn btn-info ascensorLinkNext center-block">Сохранить и перейти дальше</button>
 					</div>
                     <br>					
 		        </div>
@@ -125,7 +125,7 @@
 			
 			<!-- Fitness club -->
             <section name="fitnessClub">
-		        <div class="container">
+		        <div class="container" style="min-width:430px;">
      	            <!--HEADER-->
      	        	
      	        	<!--REG STAGES-->
@@ -137,14 +137,14 @@
 					
                     <!--REG TITLE-->
                 	<div class="row">
-                	    <div class="col-sm-offset-2 col-sm-8">
+                	    <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                 	        <h3 class="text-center" style="padding-bottom:.2em; border-bottom:1px solid #eee;">Фитнес клуб</h3>
                 	    </div>
                 	</div>
 
                 	<!--REG NOTE-->
                 	<div class="row">
-                	    <div class="col-sm-offset-3 col-sm-6">
+                	    <div class="col-md-offset-2 col-md-8 col-lg-offset-3 col-lg-6">
                 	        <p class="text-center" style="color:#999;"><em>Укажите Ваш фитнес клуб и Вы сможете найти своих знакомых</em></p>
                 	    </div>
                 	</div>
@@ -154,16 +154,16 @@
                     <form class="form-horizontal" action=""  >
                     	<fieldset>
 						    <!--club name-->
-						    <div class="form-group form-group-sm">
-                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="club">Название</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+						    <div class="form-group">
+                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="club">Название</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="text" id="club" maxlength="25" name="club" placeholder="введите название" class="form-control">
                     			</div>
                     		</div>
 							<!--club address-->
-		        			<div class="form-group form-group-sm">
-                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="clubadress">Адрес</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+		        			<div class="form-group">
+                    			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="clubadress">Адрес</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="text" id="clubadress" name="clubadress" placeholder="введите адрес" class="form-control">
                     			</div>
                     		</div>
@@ -171,13 +171,9 @@
                     </form>
                     <br>
 					<div class="row">
-					    <div class="visible-xs-block col-xs-offset-3 col-sm-offset-5">
-	     				    <button class="btn btn-default btn-sm ascensorLinkPrev">Назад</button>					
-						    <button class="btn btn-info btn-sm ascensorLinkNext">Сохранить</button>
-					    </div>
-						<div class="visible-sm-block visible-md-block visible-lg-block col-xs-offset-3 col-sm-offset-5">
-	     				    <button class="btn btn-default btn-sm ascensorLinkPrev">Назад</button>					
-						    <button class="btn btn-info btn-sm ascensorLinkNext">Сохранить и перейти дальше</button>
+						<div class="col-xs-offset-3 col-sm-offset-4 col-md-offset-5">
+	     				    <button class="btn btn-default ascensorLinkPrev">Назад</button>					
+						    <button class="btn btn-info ascensorLinkNext">Сохранить и перейти дальше</button>
 					    </div>
                     </div>
 					<br>				
@@ -186,7 +182,7 @@
 			
 			<!-- Strength -->
             <section name="strength">
-		        <div class="container">
+		        <div class="container" style="min-width:430px;">
      	            <!--HEADER-->
      	        	
      	        	<!--REG STAGES-->
@@ -198,14 +194,14 @@
 					
                     <!--REG TITLE-->
                 	<div class="row">
-                	    <div class="col-sm-offset-2 col-sm-8">
+                	    <div class="col-md-offset-1 col-md-10 col-lg-offset-2 col-lg-8">
                 	        <h3 class="text-center" style="padding-bottom:.2em; border-bottom:1px solid #eee;">Основные упражнения</h3>
                 	    </div>
                 	</div>
 
                 	<!--REG NOTE-->
                 	<div class="row">
-                	    <div class="col-sm-offset-3 col-sm-6">
+                	    <div class="col-sm-offset-2 col-sm-8 col-lg-offset-3 col-lg-6">
                 	        <p class="text-center" style="color:#999;"><em>Укажите данные по основным упражнениям и Вы сможете сравнить свою силу с другими участниками, а также узнать рейтинг</em></p>
                 	    </div>
                 	</div>
@@ -216,71 +212,61 @@
                     	<fieldset>
 						    <!--benchpress-->
 							<div class="row">
-							    <div id="legend" class="col-sm-offset-4 col-sm-8">
-    						    	<h5 class="visible-xs-block visible-sm-block"><b>Жим штанги лежа</b></h5>
-								    <h4 class="visible-md-block visible-lg-block">Жим штанги лежа</h4>	
+							    <div id="legend" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+								    <h4 class="">Жим штанги лежа</h4>	
 								</div>
 							</div>
-						    <div class="form-group form-group-sm">
-                    			<label class="visible-xs-block visible-sm-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="benchpress"><small>1 повторение</small></label>
-                    			<label class="visible-md-block visible-lg-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="benchpress">1 повторение</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+						    <div class="form-group">
+                    			<label class="control-label control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0; font-weight:normal;"  for="benchpress">1 повторение</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="number" step="2.5" min="0" max="488" id="benchpress" name="benchpress" placeholder="максимальный вес, кг" class="form-control">
                     			</div>
                     		</div>
 							<!--pressstanding-->
 							<div class="row">
-							    <div id="legend" class="col-sm-offset-4 col-sm-8">
-    						    	<h5 class="visible-xs-block visible-sm-block"><b>Жим штанги стоя от груди</b></h5>
-								    <h4 class="visible-md-block visible-lg-block">Жим штанги стоя от груди</h4>	
+							    <div id="legend" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+								    <h4 class="">Жим штанги стоя от груди</h4>	
 								</div>
 							</div>
-		        			<div class="form-group form-group-sm">
-                    			<label class="visible-xs-block visible-sm-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="pressstanding"><small>1 повторение</small></label>
-                    			<label class="visible-md-block visible-lg-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="pressstanding">1 повторение</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+		        			<div class="form-group">
+                    			<label class="control-label control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0; font-weight:normal;"  for="pressstanding">1 повторение</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="number" step="2.5" min="0" max="200"id="pressstanding" name="pressstanding" placeholder="максимальный вес, кг" class="form-control">
                     			</div>
                     		</div>
 							<!--deadlift-->
 							<div class="row">
-							    <div id="legend" class="col-sm-offset-4 col-sm-8">
-    						    	<h5 class="visible-xs-block visible-sm-block"><b>Становая тяга</b></h5>
-								    <h4 class="visible-md-block visible-lg-block">Становая тяга</h4>	
+							    <div id="legend" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+								    <h4 class="">Становая тяга</h4>	
 								</div>
 							</div>
-		        			<div class="form-group form-group-sm">
-                    			<label class="visible-xs-block visible-sm-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="deadlift"><small>1 повторение</small></label>
-                    			<label class="visible-md-block visible-lg-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="deadlift">1 повторение</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+		        			<div class="form-group">
+                    			<label class="control-label control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0; font-weight:normal;"  for="deadlift">1 повторение</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="number" step="2.5" min="0" max="500" id="deadlift" name="deadlift" placeholder="максимальный вес, кг" class="form-control">
                     			</div>
                     		</div>
 							<!--squat-->
 							<div class="row">
-							    <div id="legend" class="col-sm-offset-4 col-sm-8">
-    						    	<h5 class="visible-xs-block visible-sm-block"><b>Приседание со штангой</b></h5>
-								    <h4 class="visible-md-block visible-lg-block">Приседание со штангой</h4>	
+							    <div id="legend" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+								    <h4 class="">Приседание со штангой</h4>	
                             	</div>
 							</div>
-		        			<div class="form-group form-group-sm">
-                    			<label class="visible-xs-block visible-sm-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="squat"><small>1 повторение</small></label>
-                    			<label class="visible-md-block visible-lg-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="squat">1 повторение</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+		        			<div class="form-group">
+                    			<label class="control-label control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0; font-weight:normal;"  for="squat">1 повторение</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="number" step="2.5" min="0" max="600" id="squat" name="squat" placeholder="максимальный вес, кг" class="form-control">
                     			</div>
                     		</div>
 							<!--tightening-->
 							<div class="row">
-							    <div id="legend" class="col-sm-offset-4 col-sm-8">
-							    	<h5 class="visible-xs-block visible-sm-block"><b>Подтягивание прямым хватом</b></h5>
-								    <h4 class="visible-md-block visible-lg-block">Подтягивание прямым хватом</h4>
+							    <div id="legend" class="col-xs-offset-2 col-xs-8 col-sm-offset-3 col-sm-6 col-md-offset-4 col-md-4">
+								    <h4 class="">Подтягивание прямым хватом</h4>
 								</div>
 							</div>
-		        			<div class="form-group form-group-sm">
-                    			<label class="visible-xs-block visible-sm-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="tightening"><small>количество</small></label>
-								<label class="visible-md-block visible-lg-block control-label col-xs-offset-2 col-xs-10 col-sm-offset-1 col-sm-3" style="padding-right:0; font-weight:normal;"  for="tightening">количество</label>
-                    			<div class="col-sm-offset-0 col-sm-4 col-xs-offset-2 col-xs-8">
+		        			<div class="form-group">
+								<label class="control-label control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0; font-weight:normal;"  for="tightening">количество</label>
+                    			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
                        			    <input type="number" step="1" min="0" max="200" id="tightening" name="tightening" placeholder="количество повторений" class="form-control">
                     			</div>
                     		</div>
@@ -288,13 +274,9 @@
                     </form>
                     <br>
 					<div class="row">
-					    <div class="visible-xs-block col-xs-offset-3 col-sm-offset-5">
-	     				    <button class="btn btn-default btn-sm ascensorLinkPrev">Назад</button>					
-						    <button class="btn btn-info btn-sm ascensorLinkNext">Сохранить</button>
-					    </div>
-						<div class="visible-sm-block visible-md-block visible-lg-block col-xs-offset-3 col-sm-offset-5">
-	     				    <button class="btn btn-default btn-sm ascensorLinkPrev">Назад</button>					
-						    <button class="btn btn-info btn-sm ascensorLinkNext">Сохранить и перейти дальше</button>
+						<div class="col-xs-offset-3 col-sm-offset-4 col-md-offset-5">
+	     				    <button class="btn btn-default ascensorLinkPrev">Назад</button>					
+						    <button class="btn btn-info ascensorLinkNext">Сохранить и перейти дальше</button>
 					    </div>
                     </div>
 					<br>

@@ -9,28 +9,54 @@
 		return {
 			getProfile : function() {
 				var profileData = {
-					title            : 'Ingénieur développement web Java J2EE !',
-					name             : 'Vital Sport - с нами уже 997 234 спортменов',
-					birthDate        : '01/01/1986',
-					startWorkingDate : '01/01/2009',
-					experience       : "$1 ans, $2 ans d'expérience"
+					sername: '',
+					name: '',
+					birthDate: '',
+					password: '',
+					password2: '',
+					email: '',
+					sex:'',
 				};
 		 
 				return profileData;
 			},
-		 
-			 
-			getStepDescription : function() {
-				var stepDescription = {
-					step1 : 'Ваше имя и фамилия будут отображаться в поиске',
-					step2 : 'Указов фитнес клуб, Вы сможете найти своих знакомых',
-					step3 : 'Указав данные по основным упражнениям, Вы сможете сравнить свою силу с силой других участников, а также узнать рейтинг силы',
-				    step4 : 'Потратив пару миниут на заполенение параметров тела, Вы сможете сравнить свое тело с другими участниками, а также узнать рейтинг тела!'
-
+			getFitnesInfo : function() {
+				var fitness = {
+				 
+					height: '',
+					weight:'',
+					fat:'',
+					neck:'',
+					chest:'',
+					waist:'',
+					hip:'',
+					biceps:'',
+					forearm:'',
+					wrist:'',
+					thigh:'',
+					ikra:'',
+					ankle:'',
+					
+					
 				};
-				return stepDescription;
+		 
+				return fitness;
 			},
-			 
+		 
+		 	getBody : function() {
+				var bodyData = {
+					sername: '',
+					name: '',
+					birthDate: '',
+					password: '',
+					password2: '',
+					email: '',
+					sex:'',
+				};
+		 
+				return bodyData;
+			},
+			
 			getNavigation : function(){
 				var nav = {
 					profile : 'Профиль',

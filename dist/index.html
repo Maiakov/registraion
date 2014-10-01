@@ -27,7 +27,7 @@
 				<div class="navbar-inner">
 					<div class="container">
 					    <span class="resume-title visible-xs-block">Vital Sport</span>
-						<span class="resume-title visible-sm-block visible-md-block visible-lg-block" ng-bind="profile.name"></span>				 
+						<span class="resume-title visible-sm-block visible-md-block visible-lg-block">Vital Sport - с нами уже 997 234 спортменов</span>				 
 						<div >
 							<span class="pull-right nav-icon">
 								<a ng-href="{{links.twitter}}" target="_blank"><i class="text-info icon-twitter"></i></a>
@@ -74,15 +74,15 @@
 						    <div class="form-group">
                     			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="email">Логин</label>
                     			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
-                       			    <input type="email" id="idInputEmail" name="email" placeholder="введите email" class="form-control" style="box-shadow: none;" data-error="Адрес эл. почты должен содержать символ '@'" autofocus required>
-                    				<div class="help-block with-errors" style="margin-bottom:0;"></div>
+                       			    <input ng-model="profile.email" type="email" id="idInputEmail" name="email" placeholder="введите email" class="form-control" style="box-shadow: none;" data-error="Адрес эл. почты должен содержать символ '@'" autofocus required>
+                    				<div class="help-block with-errors" style="margin-bottom:0;"></div> 
 								</div>
                     		</div>
 							<!--password-->
 		        			<div class="form-group">
                     			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="password">Пароль</label>
                     			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
-                       			    <input type="password" id="idInputPassword" maxlength="20" name="password" placeholder="введите пароль" class="form-control" style="box-shadow: none;" data-minlength=6 data-error="Ваш пароль должен содержать не менее 6 символов" required>
+                       			    <input ng-model="profile.password"type="password" id="idInputPassword" maxlength="20" name="password" placeholder="введите пароль" class="form-control" style="box-shadow: none;" data-minlength=6 data-error="Ваш пароль должен содержать не менее 6 символов" required>
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
 								</div>
                     		</div>
@@ -90,7 +90,7 @@
 							<div class="form-group">
                     			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;" for="password_confirm">Повторить пароль</label>
                     			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
-                       			    <input type="password" id="idInputPasswordConfirm" maxlength="20" name="password_confirm" placeholder="повторите пароль" class="form-control" style="box-shadow: none;" data-match="#idInputPassword" data-match-error="Пароли не совпадают" required>
+                       			    <input ng-model="profile.password2" type="password" id="idInputPasswordConfirm" maxlength="20" name="password_confirm" placeholder="повторите пароль" class="form-control" style="box-shadow: none;" data-match="#idInputPassword" data-match-error="Пароли не совпадают" required>
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
 								</div>
                     		</div>
@@ -98,25 +98,25 @@
                     		<div class="form-group">
                                 <label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;" for="username">Имя</label>
                     			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
-                    				<input type="text" id="idInputUserName" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="username" placeholder="введите имя" class="form-control" style="box-shadow: none;" data-error="Введите свое настоящее имя" required>									
+                    				<input ng-model="profile.name"type="text" id="idInputUserName" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="username" placeholder="введите имя" class="form-control" style="box-shadow: none;" data-error="Введите свое настоящее имя" required>									
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
-								</div>
+						 		</div>
                     		</div>
                             <!--user surname-->							
                     		<div class="form-group">
                     			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="usersername">Фамилия</label>
                     			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
-                       			    <input type="text" id="idInputUserSername" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="usersername" placeholder="введите фамилию" class="form-control" style="box-shadow: none;" data-error="Введите свою настоящую фамилию"  required>
+                       			    <input ng-model="profile.sername" type="text" id="idInputUserSername" pattern="[A-Za-zА-Яа-я+і+І]+" maxlength="20" name="usersername" placeholder="введите фамилию" class="form-control" style="box-shadow: none;" data-error="Введите свою настоящую фамилию"  required>
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
 								</div>
                     		</div>
                             <!--sex-->
                             <div class="form-group">
                                 <label class="radio-inline col-xs-offset-2 col-sm-offset-3 col-md-offset-4" style="padding-left:3em;">
-                                    <input type="radio" name="inlineRadioOptions" id="idRadioMale" value="male" required> мужчина
+                                    <input ng-model="profile.sex" type="radio" name="inlineRadioOptions" id="idRadioMale" value="male" required> мужчина
                                 </label>
                                 <label class="radio-inline">
-                                    <input type="radio" name="inlineRadioOptions" id="idRadioFemale" value="female" required> женщина
+                                    <input ng-model="profile.sex"type="radio" name="inlineRadioOptions" id="idRadioFemale" value="female" required> женщина
 								</label>
 							</div>
                         </fieldset>
@@ -163,14 +163,14 @@
 						    <div class="form-group">
                     			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="club">Название</label>
                     			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
-                       			    <input type="text" id="idInputClubName" maxlength="25" name="clubname" placeholder="введите название" class="form-control" style="box-shadow: none;" autofocus>
+                       			    <input ng-model="fitnes.name"type="text" id="idInputClubName" maxlength="25" name="clubname" placeholder="введите название" class="form-control" style="box-shadow: none;" autofocus>
                     			</div>
                     		</div>
 							<!--club address-->
 		        			<div class="form-group">
                     			<label class="control-label col-xs-offset-2 col-xs-10 col-sm-offset-0 col-sm-3 col-md-4" style="padding-right:0;"  for="clubadress">Адрес</label>
                     			<div class="col-xs-offset-2 col-xs-8 col-sm-offset-0 col-sm-6 col-md-4">
-                       			    <input type="text" id="idInputClubAdress" name="clubadress" placeholder="введите адрес" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="fitnes.address" type="text" id="idInputClubAdress" name="clubadress" placeholder="введите адрес" class="form-control" style="box-shadow: none;">
                     			</div>
                     		</div>
                         </fieldset>
@@ -329,7 +329,7 @@
 						    <div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="height">Рост</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputHeight" name="height" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Рост, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;" autofocus>
+                       			    <input ng-model="body.height" type="text" id="idInputHeight" name="height" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Рост, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;" autofocus>
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -337,7 +337,7 @@
 							<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="weight">Вес</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputWeight" name="weight" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Вес, кг" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.weight"type="text" id="idInputWeight" name="weight" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Вес, кг" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -345,7 +345,7 @@
 							<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="fat">Процент жира</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputFat" name="fat" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Процент жира, %" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.fat"type="text" id="idInputFat" name="fat" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Процент жира, %" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -359,7 +359,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="neck">Шея</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputNeck" name="neck" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Шея, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.neck"type="text" id="idInputNeck" name="neck" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Шея, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                      				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -367,7 +367,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="chest">Грудь</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputChest" name="chest" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Грудь, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.chest" type="text" id="idInputChest" name="chest" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Грудь, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                      				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -375,7 +375,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="waist">Талия</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputWaist" name="waist" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Талия, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.waist" type="text" id="idInputWaist" name="waist" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Талия, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -383,7 +383,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="hip">Бедра</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputHip" name="hip" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Бедра, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.hip" type="text" id="idInputHip" name="hip" pattern="\d+([.,]\d{1})?" maxlength="5" placeholder="Бедра, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>							
@@ -397,7 +397,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="biceps">Бицепс</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputBiceps" name="biceps" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Бицепс, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.biceps" type="text" id="idInputBiceps" name="biceps" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Бицепс, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -405,7 +405,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="forearm">Предплечье</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputForearm" name="forearm" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Предплечье, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.forearm" type="text" id="idInputForearm" name="forearm" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Предплечье, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -413,7 +413,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="wrist">Запястье</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputWrist" name="wrist" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Запястье, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.wrist" type="text" id="idInputWrist" name="wrist" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Запястье, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -427,7 +427,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="thigh">Бедро</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputThigh" name="thigh" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Бедро, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.thigh" type="text" id="idInputThigh" name="thigh" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Бедро, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -435,7 +435,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="ikra">Икра</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputIkra" name="ikra" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Икра, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.ikra" type="text" id="idInputIkra" name="ikra" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Икра, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>
@@ -443,7 +443,7 @@
 		        			<div class="form-group">
                     			<label class="control-label col-sm-2 col-sm-offset-2" style="padding-right:0; font-weight:normal;" for="ankle">Лодыжка</label>
                     			<div class="col-sm-3">
-                       			    <input type="text" id="idInputAnkle" name="ankle" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Лодыжка, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
+                       			    <input ng-model="body.ankle" type="text" id="idInputAnkle" name="ankle" pattern="\d+([.,]\d{1})?" maxlength="4" placeholder="Лодыжка, см" data-error="Введите число после запятой" class="form-control" style="box-shadow: none;">
                     				<div class="help-block with-errors" style="margin-bottom:0;"></div>
                     			</div>
                     		</div>							

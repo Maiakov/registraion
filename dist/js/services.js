@@ -43,7 +43,7 @@
 				return fitness;
 			},
 		 
-		 	getBody : function() {
+		 	getBodyInfo : function() {
 				var bodyData = {
 					sername: '',
 					name: '',

@@ -52,7 +52,8 @@ var MY_RESUME = {};
 			                  ascensorFloorName:["MainInfo", "FitnessClub", "Strength", "Body"], 
 							  direction: [[0,0],[0,1],[0,2],[0,3]],
 							  childType: 'section',
-							  time: 1000
+							  time: 1000,
+							  easing: 'easeInOutQuad'
 							  });
 			var ascensorInstance = $('#ascensorBuilding').data('ascensor');
 

@@ -26,26 +26,7 @@ var MY_RESUME = {};
 	
 		var minWidth = 320;
 		
-		// Ascensorjs plugin call OLD
-//		$('#ascensorBuilding').ascensor({
-//			ascensorName: 'ascensor',
-//			childType: 'section',
-//	 
-//			ascensorFloorName: ['Profile', 'Skills', 'Career', 'Hobies' ],
-//			time: 1000,
-//			windowsOn: 0,
-//			direction: "chocolate",
-//			directionOnSize: {type:'width', size:minWidth, direction:"x"},
-//			ascensorMap: [[0,0],[0,1],[0,2],[0,3] ],
-//			easing: 'easeInOutQuad',
-//			keyNavigation: false,
-//			queued: false,
-//			queuedDirection: "x",
-//			overflow: 'hidden',
-//			position: {left:0,top:42},
-//			positionOnSize: {type:'width', size:minWidth, position:{left:0,top:95}},
-//			minWidth: minWidth
-//		});
+		 
 
 	    // Ascensorjs plugin call
 			var ascensor = $('#ascensorBuilding').ascensor({

@@ -55,6 +55,18 @@
 				};
 		 
 				return bodyData;
+			},	
+			getStrength : function() {
+				var strength = {
+					benchPress: '',
+					deadlift: '',
+					tightening: '',
+					squat: '',
+					pressstanding: '', 
+					 
+				};
+		 
+				return strength;
 			},
 			
 			getNavigation : function(){
@@ -83,7 +95,11 @@
 	
 	 
 	 
+	myResumeServices.factory('REST', ['$resource', function($resource) {
+		var res = $resource('http://www.htmlcodetutorial.com/cgi-bin/mycgi.pl');
 	
+		return res;
+	}]);
 	/**************************************
 	* Utility service
 	***************************************/

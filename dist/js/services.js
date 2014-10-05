@@ -9,7 +9,7 @@
 		return {
 			getProfile : function() {
 				var profileData = {
-					sername: '',
+					surname: '',
 					name: '',
 					birthDate: '',
 					password: '',

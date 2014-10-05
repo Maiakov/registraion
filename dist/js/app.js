@@ -16,8 +16,7 @@
  
 		$scope.body = myResumeData.getBodyInfo();	
 		$scope.rest = function(model){
-	 
-				
+	  
 			 return REST.save(model);
 		 };
 		 

@@ -99,7 +99,7 @@
 		var res = $resource('http://localhost:8080/vitalsport-REST-1.0-SNAPSHOT/vitalsport/registration/newUser/', {},
 			{
 				 save: {
-				 	method:'POST', headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+				 	method:'POST', headers: {'Content-Type': 'application/json'}
 				 }
 				});
 	

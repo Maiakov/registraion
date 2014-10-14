@@ -16,13 +16,16 @@
 					password2: '',
 					email: '',
 					sex:'',
-				};
-		 
-				return profileData;
-			},
-			getFitnesInfo : function() {
-				var fitness = {
-				 
+
+					fitnestName: '',
+					fitnesAddress: '',
+
+					benchPress: '',
+					deadlift: '',
+					tightening: '',
+					squat: '',
+					pressstanding: '', 
+
 					height: '',
 					weight:'',
 					fat:'',
@@ -36,39 +39,11 @@
 					thigh:'',
 					ikra:'',
 					ankle:'',
-					
-					
 				};
 		 
-				return fitness;
+				return profileData;
 			},
 		 
-		 	getBodyInfo : function() {
-				var bodyData = {
-					sername: '',
-					name: '',
-					birthDate: '',
-					password: '',
-					password2: '',
-					email: '',
-					sex:'',
-				};
-		 
-				return bodyData;
-			},	
-			getStrength : function() {
-				var strength = {
-					benchPress: '',
-					deadlift: '',
-					tightening: '',
-					squat: '',
-					pressstanding: '', 
-					 
-				};
-		 
-				return strength;
-			},
-			
 			getNavigation : function(){
 				var nav = {
 					profile : 'Профиль',

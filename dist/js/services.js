@@ -11,11 +11,12 @@
 				var profileData = {
 					surname: '',
 					name: '',
-					birthDate: '',
+					birthday: '',
 					password: '',
 					password2: '',
 					email: '',
 					sex:'',
+
 
 					fitnestName: '',
 					fitnesAddress: '',
